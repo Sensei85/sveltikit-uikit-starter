@@ -2,18 +2,13 @@
   export let dropdownMode = "hover"
   export let animation = "uk-animation-scale-up uk-transform-origin-top-center"
   export let position = "bottom-right"
-  /** 
-   * Provide icons to your dropdown links as svg or class based html icons like so `<i class="mdi mdi-account"></i>` and they will just render effortlessly 
-   * svg icon width and height is set to "12"
-  */
- import { userMenuItems } from "$lib/stores/site/Util";
-
+  export let menuItems
 </script>
 
 <div class="uk-navbar-dropdown" 
   uk-dropdown="mode: {dropdownMode}; animation: {animation}; pos: {position}">
   <ul class="uk-nav uk-navbar-dropdown-nav">
-    {#each $userMenuItems as item}
+    {#each menuItems as item}
       {#if item?.hasHeader}
         <li class="uk-nav-header">
           {#if item?.icon}
