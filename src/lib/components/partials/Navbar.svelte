@@ -2,7 +2,7 @@
   // @ts-ignore
   import { page } from "$app/stores"
 
-  import { navLeftLinks, navRightLinks } from '../../stores/site/Util'
+  import { navLeftLinks, navRightLinks, userMenuItems } from '../../stores/site/Util'
   import MenuDropdown from '$components/partials/MenuDropdown.svelte'
   import MegaMenu from '$components/partials/MegaMenu.svelte'
   import NotificationDropdown from '$components/partials/NotificationDropdown.svelte'
@@ -64,7 +64,7 @@
           <li>
             <!-- Avartar navbar link component -->
             <NavLinkAvatar />
-            <MenuDropdown dropdownMode={"click"} />
+            <MenuDropdown menuItems={$userMenuItems} dropdownMode={"click"} />
           </li>
           <li>
             <!-- Notification bell icon and component in header -->
