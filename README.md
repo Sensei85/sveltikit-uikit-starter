@@ -9,7 +9,7 @@ Everything you need to build a Svelte project, powered by [`create-svelte`](http
 Just run command below to clone the repository
 
 ```
-
+git clone https://github.com/Sensei85/sveltikit-uikit-starter.git
 ```
 
 ## Developing
