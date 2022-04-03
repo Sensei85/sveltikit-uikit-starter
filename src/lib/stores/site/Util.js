@@ -181,7 +181,11 @@ export const footerItems = writable([
 	}
 ])
 
-/** User menu items */
+/** 
+	* User menu items
+  * Provide icons to your dropdown links as svg or class based html icons like so `<i class="mdi mdi-account"></i>` and they will just render effortlessly 
+  * svg icon width and height is set to "12"
+*/
 export const userMenuItems = writable([
 	{ title: 'Applications', external: true, path: '#!' },
 	{ title: 'Notifications', path: '#!' },
