@@ -1,8 +1,30 @@
-# create-svelte
+# Create Sveltekit + Uikit App
 
 ## A simple Sveltekit Uikit starter to help you scaffold a sveltekit project with Uikit as your beloved css framework.
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Out of the box supports:
+
+- SCSS
+- Svelte preprocessor
+- Prettier
+- Eslint
+
+## Prebuilt components
+
+-Nav bar with data driven navigation
+-Mobile Nav (not sticky: can easily add)
+-Mega Menu (Array data inside component)
+-Some basic pages (Home, Contact, Download, Login, Register)
+-MainFooter (Both sticky)
+-MiniFooter (Both sticky)
+-Off canvas menu (Shares nav array links with main nav)
+-User Profile Menu Dropdown (Data driven)
+-Nav notification dropdown
+-Off canvas extra wide notification drawer (Can be seen in mobile responsive mode)
+-Breadcrumbs
+-Parallex Slider (No images: just add yours and call the component)
+
+Everything you need to build a Sveltekit + Uikit project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
 ## Creating a project
 
