@@ -1,0 +1,42 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+@import "./../node_modules/uikit/dist/css/uikit.min.css";
+
+// Navbar link styles
+.uk-navbar-nav > li > a {
+  &:hover {
+    color: $primary;
+  }
+}
+// Set navbar background to white
+.uk-navbar-container {
+  &:not(.uk-navbar-transparent) {
+    background: $white;
+  }
+}
+
+// Setting background blur filter on uk-sticky navbar
+@supports(backdrop-filter: opacity( 1 )) {
+  $isFirefoxSupported: true;
+}
+
+div .uk-navbar-sticky {
+  @if $isFirefoxSupported == true {
+    background-color: #ffffff !important;
+  } @else {
+    background: rgba( 255, 255, 255, 0.25 ) !important;
+  }
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+// Add border top to navbar dropdown (you can always remove this)
+div .uk-navbar-dropdown:not(.notification__wrapper) {
+  border-top: .2rem solid $primary;
+  padding: 15px;
+}
+
+// Change li .uk-active color
+.uk-navbar-dropdown-nav > li .uk-active {
+  color: $primary;
+}
