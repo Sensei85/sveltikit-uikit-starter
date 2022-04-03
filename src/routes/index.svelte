@@ -21,8 +21,8 @@
           <li>Mobile Nav (not sticky: can easily add)</li>
           <li>Mega Menu (Array data inside component)</li>
           <li>Some basic pages</li>
-          <li>MainFooter (Both sticky)</li>
-          <li>MiniFooter (Both sticky)</li>
+          <li>MainFooter (Sticky)</li>
+          <li>MiniFooter (Sticky)</li>
           <li>Offcanvas menu (Shares nav array links with main nav)</li>
           <li>User Profile Menu Dropdown (Data driven)</li>
           <li>Nav notification dropdown</li>

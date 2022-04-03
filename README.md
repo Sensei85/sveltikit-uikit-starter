@@ -15,8 +15,8 @@
 - Mobile Nav (not sticky: can easily add)
 - Mega Menu (Array data inside component)
 - Some basic pages (Home, Contact, Download, Login, Register)
-- MainFooter (Both sticky)
-- MiniFooter (Both sticky)
+- MainFooter (Sticky)
+- MiniFooter (Sticky)
 - Off canvas menu (Shares nav array links with main nav)
 - User Profile Menu Dropdown (Data driven)
 - Nav notification dropdown
