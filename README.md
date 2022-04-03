@@ -22,7 +22,7 @@
 - Nav notification dropdown
 - Off canvas extra wide notification drawer (Can be seen in mobile responsive mode)
 - Breadcrumbs
-- Parallex Slider (No images: just add yours and call the component)
+- Parallex Slider (No images: add images and call the component)
 
 Everything you need to build a Sveltekit + Uikit project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
