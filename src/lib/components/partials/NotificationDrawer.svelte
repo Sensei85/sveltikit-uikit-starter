@@ -17,6 +17,7 @@
 <style lang="scss">
   .uk-offcanvas-bar {
     min-width: calc(100vw - 25%);
+    overflow-x: hidden;
   }
   .notification__drawer {
     &-header {
