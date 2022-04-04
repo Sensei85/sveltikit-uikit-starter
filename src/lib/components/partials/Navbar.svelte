@@ -2,7 +2,7 @@
   // @ts-ignore
   import { page } from "$app/stores"
 
-  import { navLeftLinks, navRightLinks, userMenuItems } from '../../stores/site/Util'
+  import { navLeftLinks, navRightLinks, userMenuItems } from '$lib/stores/site/Util'
   import MenuDropdown from '$components/partials/MenuDropdown.svelte'
   import MegaMenu from '$components/partials/MegaMenu.svelte'
   import NotificationDropdown from '$components/partials/NotificationDropdown.svelte'
@@ -30,10 +30,11 @@
                 <a 
                   class:active-page={link?.path === $page.url.pathname} 
                   class="uk-text-bold" 
-                  href="{link?.path}">{link?.title}
+                  href="{link?.path}">
+                  {link?.title}
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-down uk-text-bold" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
                 </a>
-                <MegaMenu dropdownMode={"click"} animation={"uk-animation-fade"} position="bottom-left" menuItems={link?.subLinks} />
+                <MegaMenu dropdownMode={"click"} animation="uk-animation-fade" position="bottom-left" menuItems={link?.subLinks} />
               </li>
             {:else}
               <li class="uk-text-bold">
