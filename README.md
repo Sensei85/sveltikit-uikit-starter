@@ -9,6 +9,21 @@
 - Prettier
 - Eslint
 
+## Prebuilt components
+
+- Nav bar with data driven navigation
+- Mobile Nav (not sticky: can easily add)
+- Mega Menu (Array data inside component)
+- Some basic pages (Home, Contact, Download, Login, Register)
+- MainFooter (Sticky)
+- MiniFooter (Sticky)
+- Off canvas menu (Shares nav array links with main nav)
+- User Profile Menu Dropdown (Data driven)
+- Nav notification dropdown
+- Off canvas extra wide notification drawer (Can be seen in mobile responsive mode)
+- Breadcrumbs
+- Parallex Slider (No images: add images and call the component)
+
 ## Screenshots
 
 ### Homepage
@@ -25,21 +40,6 @@
 
 ### Notification Dropdown
 ![Notification Dropdown](screenshots/notification-dropdown.jpg "Notification Dropdown")
-
-## Prebuilt components
-
-- Nav bar with data driven navigation
-- Mobile Nav (not sticky: can easily add)
-- Mega Menu (Array data inside component)
-- Some basic pages (Home, Contact, Download, Login, Register)
-- MainFooter (Sticky)
-- MiniFooter (Sticky)
-- Off canvas menu (Shares nav array links with main nav)
-- User Profile Menu Dropdown (Data driven)
-- Nav notification dropdown
-- Off canvas extra wide notification drawer (Can be seen in mobile responsive mode)
-- Breadcrumbs
-- Parallex Slider (No images: add images and call the component)
 
 Everything you need to build a Sveltekit + Uikit project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
