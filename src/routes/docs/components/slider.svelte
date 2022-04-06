@@ -14,6 +14,8 @@
 
 <main uk-height-viewport="expand: true">
   <div class="uk-container uk-margin-top">
-    <h4 class="uk-heading uk-heading-bullet">SLIDER</h4>
+    <div class="header uk-margin-medium-bottom">
+      <h1>Upload Component</h1>
+    </div>
   </div>
 </main>
