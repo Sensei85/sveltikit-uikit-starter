@@ -15,7 +15,7 @@
 <main uk-height-viewport="expand: true">
   <div class="uk-container uk-margin-top">
     <div class="header uk-margin-medium-bottom">
-      <h1>Upload Component</h1>
+      <h1>Slider</h1>
     </div>
   </div>
 </main>
