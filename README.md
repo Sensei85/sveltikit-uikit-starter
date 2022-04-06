@@ -15,13 +15,13 @@
 ![Home page](screenshots/home.jpg "Home page")
 
 ### Mega Menu
-![Mega Menu](screenshots/mega-menu.png "Mega menu")
+![Mega Menu](screenshots/mega-menu.jpg "Mega menu")
 
 ### User Menu
-![User Menu](screenshots/user-menu.png "User menu")
+![User Menu](screenshots/user-menu.jpg "User menu")
 
 ### Notification Dropdown
-![Notification Dropdown](screenshots/otification-dropdown.png "Notification Dropdown")
+![Notification Dropdown](screenshots/notification-dropdown.jpg "Notification Dropdown")
 
 ## Prebuilt components
 
