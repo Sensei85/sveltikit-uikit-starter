@@ -3,17 +3,7 @@ import { writable } from 'svelte/store'
 /** right navbar links */
 export const navLeftLinks = writable([
 	{ title: 'Home', path: '/' },
-	{
-		title: 'About',
-		path: '/about',
-		hasSubMenu: true,
-		subLinks: [
-			{ title: 'About 1', path: '/about' },
-			{ title: 'About 2', path: '/about' },
-			{ title: 'About 3', path: '/about' },
-			{ title: 'About 4', external: true, path: 'https://someexternallink.com' }
-		]
-	},
+	{ title: 'About', path: '/about' },
 	{
 		title: 'Mega Menu',
 		path: '#',
@@ -57,18 +47,20 @@ export const navLeftLinks = writable([
 		]
 	},
 	{
-		title: 'Nav Dropdown',
+		title: 'Dropdown',
+		path: '#',
 		hasSubMenu: true,
-		path: '/',
 		subLinks: [
 			{ title: 'Services 1', path: '/services' },
 			{ title: 'Services 2', path: '/services' },
-			{ title: 'Services 3', path: '/services' }
+			{ title: 'Services 3', path: '/services' },
+			{ title: 'Opens In New Tab', external: true, path: 'https://someexternallink.com' }
 		]
 	},
+	{ title: 'Docs', path: '/docs' },
 	{ title: 'Download', path: '/download' },
 	{ title: 'Contact', path: '/contact' }
-])
+]);
 
 /** left navbar links */
 export const navRightLinks = writable([
@@ -219,6 +211,16 @@ export const userMenuItems = writable([
 		]
 	}
 ])
+
+/** Components side nav links */
+const BASE_DIR = '/docs';
+export const componentsDocsLinks = writable([
+	{ title: 'Upload', path: `${BASE_DIR}/components/upload` },
+	{ title: 'Slider', path: `${BASE_DIR}/components/slider` }
+])
+
+/** Documentation page right side navigation */
+export const pageNavigation = writable([])
 
 /** Get current year */
 export const currentYear = writable()
