@@ -1,0 +1,19 @@
+<svelte:head>
+  <title>Components | Slider</title>
+</svelte:head>
+
+<script>
+  import { pageNavigation } from '$lib/stores/site/Util';
+
+  pageNavigation.set([
+    { title: "Slider Option 1", path: "#option-1"},
+    { title: "Slider Option 2", path: "#option-2"},
+    { title: "Slider Option 3", path: "#option-3"},
+  ])
+</script>
+
+<main uk-height-viewport="expand: true">
+  <div class="uk-container uk-margin-top">
+    <h4 class="uk-heading uk-heading-bullet">SLIDER</h4>
+  </div>
+</main>
