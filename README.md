@@ -55,4 +55,18 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
+## Screenshots
+
+### Homepage
+![Home page](./screenshots/home.png "Home page")
+
+### Mega Menu
+![Mega Menu](./screenshots/mega-menu.png "Mega menu")
+
+### User Menu
+![User Menu](./screenshots/user-menu.png "User menu")
+
+### Notification Dropdown
+![Notification Dropdown](./screenshots/otification-dropdown.png "Notification Dropdown")
+
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
