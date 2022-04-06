@@ -41,8 +41,6 @@
 ### Notification Dropdown
 ![Notification Dropdown](screenshots/notification-dropdown.jpg "Notification Dropdown")
 
-Everything you need to build a Sveltekit + Uikit project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
 ## Known Issues
 - When you first run `npm run dev`, you'll get an error 500 that with message of "window not defined." However this error goes away when you begin navigating to other pages as everything works fine
 - Smooth scrolling behavior not available since it depends on the window object. I'm guessing uikit core window is not parsed by SK hence smooth scrolling won't work. 
