@@ -14,6 +14,9 @@
 ### Homepage
 ![Home page](screenshots/home.jpg "Home page")
 
+### Docs page
+![Home page](screenshots/docs-page.jpg "Docs page")
+
 ### Mega Menu
 ![Mega Menu](screenshots/mega-menu.jpg "Mega menu")
 
