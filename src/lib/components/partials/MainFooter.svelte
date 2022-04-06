@@ -6,9 +6,9 @@
 
 <footer class="uk-section-secondary uk-margin-top">
   <div class="uk-container uk-section">
-    <div class="uk-grid uk-grid-medium">
+    <div class="uk-grid uk-grid-medium uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2@s uk-grid-row-medium">
       {#each $footerItems as footerItem}
-        <div class="uk-width-1-4@l uk-width-1-1@m uk-width-1-1@s">
+        <div class="uk-margin-bottom">
           <h4>{footerItem?.gridSection?.sectionTitle}</h4>
           <hr style="width: 20%">
           {#if footerItem?.gridSection?.component}
