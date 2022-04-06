@@ -14,7 +14,6 @@
     },
     {
       title: 'Docs',
-      path: '/docs',
       icon: `` // could be an svg or a class based icon element,
     },
   ]
