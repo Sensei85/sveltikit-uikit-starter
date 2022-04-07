@@ -1,5 +1,5 @@
 <div id="mobile-nav" class="uk-hidden@m">
-  <nav class="uk-navbar-container uk-margin uk-box-shadow-small" uk-navbar>
+  <nav class="uk-navbar-container uk-box-shadow-small" uk-navbar>
     <div class="nav-overlay uk-navbar-left">
       <div class="uk-navbar-item">
         <a 
