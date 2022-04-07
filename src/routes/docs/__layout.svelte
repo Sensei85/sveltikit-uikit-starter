@@ -5,8 +5,8 @@
 
 <main>
   <div class="uk-grid-collapse" uk-grid>
-    <div class="uk-width-1-5 uk-visible@m">
-      <aside class="aside-wrapper uk-position-fixed uk-width-1-5">
+    <div class="uk-width-1-5 uk-width-1-6@xl uk-visible@m">
+      <aside class="aside-wrapper uk-position-fixed uk-width-1-5 uk-width-1-6@xl">
         <div class="aside-nav">
           <div class="uk-padding" uk-overflow-auto="selContainer: .aside-wrapper; selContent: .aside-nav">
             <h4>Documentation</h4>
