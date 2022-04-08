@@ -5,6 +5,7 @@
 <script>
   import MiniFooter from "$components/bites/MiniFooter.svelte";
   import Breadcrumbs from "$components/bites/Breadcrumbs.svelte";
+  import PageHeading from "$lib/components/bites/PageHeading.svelte";
 
   export let crumbs = [
     {
@@ -23,7 +24,9 @@
   <Breadcrumbs {crumbs} />
 
   <div class="uk-container uk-margin-top">
-    <h4 class="uk-heading uk-heading-bullet">INTRODUCTION</h4>
+    <PageHeading>
+      <h2 slot="heading">INTRODUCTION</h2>
+    </PageHeading>
   </div>
 </main>
 

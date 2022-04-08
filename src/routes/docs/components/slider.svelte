@@ -3,19 +3,21 @@
 </svelte:head>
 
 <script>
+  import PageHeading from '$lib/components/bites/PageHeading.svelte';
   import { pageNavigation } from '$lib/stores/site/Util';
-
+  
   pageNavigation.set([
-    { title: "Slider Option 1", path: "#option-1"},
-    { title: "Slider Option 2", path: "#option-2"},
-    { title: "Slider Option 3", path: "#option-3"},
+    { title: "Link 1", path: "#option-1"},
+    { title: "Link 2", path: "#option-2"},
+    { title: "Link 3", path: "#option-3"},
   ])
 </script>
 
 <main uk-height-viewport="expand: true">
   <div class="uk-container uk-margin-top">
-    <div class="header uk-margin-medium-bottom">
-      <h1>Slider</h1>
-    </div>
+    <PageHeading>
+      <h2 slot="heading">Slider</h2>
+      <p slot="desc">Blank page...</p>
+    </PageHeading>
   </div>
 </main>

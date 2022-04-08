@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script>
+  import PageHeading from "$lib/components/bites/PageHeading.svelte";
   import FileUploader from "$lib/components/docs/FileUploader.svelte"
   import ProfilePictureUpload from "$lib/components/docs/ProfilePictureUpload.svelte"
   import { pageNavigation } from '$lib/stores/site/Util';
@@ -19,13 +20,14 @@
 
 <main uk-height-viewport="expand: true" class="uk-margin-medium-bottom">
   <div class="uk-container">
-    <div class="header uk-margin-medium-bottom">
-      <h1>Upload Component</h1>
-      <p class="uk-text-lead">Uikit file upload component is great, but wouldn't it be great if we could actualy have a preview of the files we are trying to submit in the form. Let's do that shall we... :-D</p>
-    </div>
+    <PageHeading>
+      <h2 slot="heading">Upload</h2>
+      <p slot="desc">
+        Uikit file upload component is great, but wouldn't it be great if we could actualy have a preview of the files we are trying to submit in the form. Let's do that shall we... :-D
+      </p>
+    </PageHeading>
 
-    <div class="uk-margin-top">
-
+    <div>
       <h4 id="option-1" class="uk-text-muted">
         <a href="#option-1" class="uk-heading uk-heading-bullet">Option 1 (Only images - multiple)</a>
       </h4>
