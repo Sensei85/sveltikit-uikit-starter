@@ -1,6 +1,10 @@
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
 @import "./../node_modules/uikit/dist/css/uikit.min.css";
 
+* {
+  scroll-behavior: smooth;
+}
+
 // Navbar link styles
 .uk-navbar-nav > li > a {
   &:hover {
