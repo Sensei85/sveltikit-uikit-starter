@@ -14,7 +14,7 @@
       </div>
       <div class="uk-text-small uk-text-muted uk-text-center uk-text-right@s">
         <span>&trade; Built By </span> | 
-        <a href="https://github.com/Sensei85" class="uk-text-muted" title="Visit NITA to know more about us." target="_blank" rel="noopener noreferrer" uk-tooltip="title: Visit NITA to know more about us.; pos: right">sensei85</a>
+        <a href="https://github.com/Sensei85" class="uk-text-muted" title="Visit my Github to see more cool stuff I build." target="_blank" rel="noopener noreferrer" uk-tooltip="title: Visit my Github to see more cool stuff I build.; pos: right">sensei85</a>
       </div>
     </div>
   </div>
