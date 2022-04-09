@@ -1,6 +1,6 @@
 <script>
   // @ts-ignore
-  import { currentYear } from "$stores/site/Util";
+  import { currentYear } from "$stores/site/items";
   export let only = false;
 </script>
 

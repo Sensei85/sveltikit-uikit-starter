@@ -1,8 +1,8 @@
 <script>
   import { page } from "$app/stores"
-  import { componentsDocsLinks } from '$lib/stores/site/Util';
+  import { componentsDocsLinks } from '$lib/stores/site/items';
   // @ts-ignore
-  import { navLeftLinks, navRightLinks } from '$stores/site/Util.js'
+  import { navLeftLinks, navRightLinks } from '$stores/site/items.js'
 </script>
 
 <div id="side-nav" uk-offcanvas="overlay: true; mode: push">

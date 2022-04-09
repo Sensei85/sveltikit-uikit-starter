@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores"
-  import { componentsDocsLinks } from "$lib/stores/site/Util";
+  import { componentsDocsLinks } from "$lib/stores/site/items";
 </script>
 
 <main>

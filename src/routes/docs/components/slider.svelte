@@ -4,7 +4,7 @@
 
 <script>
   import PageHeading from '$lib/components/bites/PageHeading.svelte';
-  import { pageNavigation } from '$lib/stores/site/Util';
+  import { pageNavigation } from '$lib/stores/site/items';
   
   pageNavigation.set([
     { title: "Link 1", path: "#option-1"},

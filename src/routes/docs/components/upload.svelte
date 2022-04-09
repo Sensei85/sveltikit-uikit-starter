@@ -6,7 +6,7 @@
   import PageHeading from "$lib/components/bites/PageHeading.svelte";
   import FileUploader from "$lib/components/docs/FileUploader.svelte"
   import ProfilePictureUpload from "$lib/components/docs/ProfilePictureUpload.svelte"
-  import { pageNavigation } from '$lib/stores/site/Util';
+  import { pageNavigation } from '$lib/stores/site/items';
 
   /** Dynamically set the value of the page navigation store to this pages links and the parent __layout file picks up the change and renders our page nav for us. */
   /** YOU DO THIS ON EVERY PAGE YOU WANT TO HAVE A PAGE NAV */

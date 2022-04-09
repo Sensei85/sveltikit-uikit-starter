@@ -1,7 +1,7 @@
 <script>
   import SocialIconsGrid from "$components/bites/SocialIconsGrid.svelte";
   import MiniFooter from "$components/bites/MiniFooter.svelte";
-  import { footerItems } from "$lib/stores/site/Util";
+  import { footerItems } from "$lib/stores/site/items";
 </script>
 
 <footer class="uk-section-secondary uk-margin-top">

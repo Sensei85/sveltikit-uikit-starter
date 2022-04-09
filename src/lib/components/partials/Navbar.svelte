@@ -2,7 +2,7 @@
   // @ts-ignore
   import { page } from "$app/stores"
 
-  import { navLeftLinks, navRightLinks, userMenuItems } from '$lib/stores/site/Util'
+  import { navLeftLinks, navRightLinks, userMenuItems } from '$lib/stores/site/items'
   import MenuDropdown from '$components/partials/MenuDropdown.svelte'
   import MegaMenu from '$components/partials/MegaMenu.svelte'
   import NotificationDropdown from '$components/partials/NotificationDropdown.svelte'

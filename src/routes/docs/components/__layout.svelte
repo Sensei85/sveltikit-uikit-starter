@@ -1,7 +1,7 @@
 <script>
   import MiniFooter from "$components/bites/MiniFooter.svelte"
   import PageNavigation from "$components/bites/PageNavigation.svelte"
-  import { pageNavigation } from "$lib/stores/site/Util";
+  import { pageNavigation } from "$lib/stores/site/items";
 </script>
 
 <div class="uk-margin-large-top">
