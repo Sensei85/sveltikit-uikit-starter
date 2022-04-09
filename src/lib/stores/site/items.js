@@ -216,7 +216,8 @@ export const userMenuItems = writable([
 const BASE_DIR = '/docs';
 export const componentsDocsLinks = writable([
 	{ title: 'Upload', path: `${BASE_DIR}/components/upload` },
-	{ title: 'Slider', path: `${BASE_DIR}/components/slider` }
+	{ title: 'Slider', path: `${BASE_DIR}/components/slider` },
+	{ title: 'Modal', path: `${BASE_DIR}/components/modal` }
 ])
 
 /** Documentation page right side navigation */
