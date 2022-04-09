@@ -1,4 +1,7 @@
 <script>
+  import { browser } from "$app/env";
+  import { fade } from "svelte/transition";
+
   import FileItem from "$lib/components/docs/FileItem.svelte"
   import docImage from "$static/images/docx.svg?url"
   import pdfImage from "$static/images/pdf.svg?url"
@@ -13,6 +16,7 @@
   let fileInputElement
   let dragover = false
   let showAlert = false
+  let errorCount = 0
   let alertMsg = ""
   let files = []
   let previewFiles = []
@@ -28,21 +32,88 @@
     "application/msword",
   ]
 
+  const validateFileType = ({ type }) => {
+    if (!ACCEPTED_MIME_TYPE.includes(type)) {
+      if (multiple) {
+        alertMsg = `Sorry, one or more of the files you selected with file type: ${type} is not allowed`
+      } else {
+        alertMsg = `Sorry, file selected of type: ${type} is not allowed`
+      }
+      fileInputElement.value = ""
+      previewFiles = []
+      showAlert = true
+      return false
+    }
+    return true
+  }
+
+  const validateFileSize = ({ size }) => {
+    if (size > 2000000) {
+      if (multiple) {
+        alertMsg = "Sorry, one or more of the files you selected exceeds the size limit of 2MB"
+      } else {
+        alertMsg = `Sorry, file selected exceedes size limit of 2MB`
+      }
+      fileInputElement.value = ""
+      previewFiles = []
+      showAlert = true
+      return false
+    }
+    return true
+  }
+
+  const generalValidation = (/** @type {object}*/ files) => {
+    if (multiple) {
+      files.forEach((/** @type {Blob}*/ file) => {
+        if (!validateFileType(file)) {
+          errorCount++ 
+          return false
+        }
+        if (!validateFileSize(file)) {
+          errorCount++ 
+          return false
+        }
+        errorCount = 0
+      })
+    } else {
+      const singleFile = files[0]
+      if (!validateFileType(singleFile)) {
+        errorCount++
+        return false
+      }
+      if (!validateFileSize(singleFile)) {
+        errorCount++
+        return false
+      }
+      errorCount = 0
+    }
+    if (errorCount !== 0) return false
+    return true
+  }
+
   const handleDragover = () => dragover = true
 
   const handleDragleave = () => dragover = false
 
   const handleFileDrop = (/** @type {object} */ e) => {
     dragover = false
+    if (!e.dataTransfer.files) return
     files = [...e.dataTransfer.files]
+    if (!generalValidation(files)) return 
     fileInputElement.files = e.dataTransfer.files
-    preparePreviewFiles({ files })
+    renderFilePreviews({ files })
   }
 
   const handleFileChange = (/** @type {object} */ e) => {
-    if (!e.target.files) return
+    if (!e.target.files) {
+      fileInputElement.value = ""
+      showAlert = false
+      alertMsg = ""
+      return
+    }
     files = [...e.target.files]
-    preparePreviewFiles({ files })
+    if (!generalValidation(files)) return
+    renderFilePreviews({ files })
   }
 
   const ifResultIsDoc = (/** @type {string} */ type) => {
@@ -50,30 +121,9 @@
     if (type === "application/pdf") return pdfImage
   }
 
-  const preparePreviewFiles = ({ files }) => {
+  const renderFilePreviews = ({ files }) => {
     previewFiles = []
     files.forEach((/** @type {Blob} */ file) => {
-      if (!ACCEPTED_MIME_TYPE.includes(file.type)) {
-        console.log(file.type)
-        if (multiple) {
-          alertMsg = `Sorry, one or more of the files you selected is not allowed`
-        }
-        alertMsg = `Sorry, file selected of type: ${file.type} is not allowed`
-        previewFiles = []
-        showAlert = true
-        return
-      }
-
-      if (file.size > 2000000) {
-        if (multiple) {
-          alertMsg = "Sorry, one or more of the files you selected exceeds the size limit of 2MB"
-        }
-        alertMsg = `Sorry, file selected exceedes size limit of 2MB`
-        previewFiles = []
-        showAlert = true
-        return
-      }
-
       showAlert = false
       alertMsg = ""
 
@@ -86,7 +136,7 @@
         } else {
           resultImage = ifResultIsDoc(file.type)
         }
-        previewFiles = [{ name: file['name'], result: resultImage }]
+        previewFiles = [...previewFiles, { name: file['name'], result: resultImage }]
       }
     })
   }
@@ -121,15 +171,16 @@
 
   <div class="uk-placeholder uk-border-rounded">
     {#if previewFiles.length !== 0}
-      <div 
-        class="uk-grid-match uk-grid-small uk-grid-row-medium uk-child-width-1-3@s uk-child-width-1-2@m uk-child-width-1-4@l" 
+      <div
+        transition:fade
+        class="uk-grid-match uk-grid-small uk-grid-row-medium uk-child-width-1-3@s uk-child-width-1-2@m uk-child-width-1-3@l" 
         uk-grid uk-scrollspy="cls: {previewAnimation}; target: .preview-item; delay: 150">
           {#each previewFiles as file}
             <FileItem {...file} />
           {/each}
       </div>
     {:else}
-      <p class="uk-text-center">File previews will show up here...</p>
+      <p transition:fade class="uk-text-center">File previews will show up here...</p>
     {/if}
   </div>
 </div>
